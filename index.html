@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Форма обратной связи</title>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <h2>Форма обратной связи</h2>
+
+  <form id="nps-form">
+    <div class="q">
+      <div class="q-title">
+        1. Вы будете рекомендовать знакомым Райффайзен Банк как потенциального работодателя?
+      </div>
+      <div class="scale" data-name="q1" data-left="точно нет" data-right="точно да"></div>
+      <p class="error" data-err="q1" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        2. Насколько тестовое задание было для вас понятным?
+      </div>
+      <div class="scale" data-name="q2" data-left="совсем непонятно" data-right="все понятно"></div>
+      <p class="error" data-err="q2" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        3. Насколько вы довольны форматом видеоинтервью как этапом отбора?
+      </div>
+      <div class="scale" data-name="q3" data-left="совсем не доволен(-а)" data-right="очень доволен(-а)"></div>
+      <p class="error" data-err="q3" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        4. Как вы оцените профессионализм рекрутера (комфортная коммуникация, подробные ответы на вопросы о вакансии)?
+      </div>
+      <!-- новый вопрос => q9 -->
+      <div class="scale" data-name="q9"
+           data-left="совсем не доволен(-а)"
+           data-right="очень доволен(-а)"
+           data-na="true"></div>
+      <p class="error" data-err="q9" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        5. Насколько вы довольны профессионализмом собеседующих, кроме рекрутера?
+      </div>
+      <!-- старый вопрос => q6 -->
+      <div class="scale" data-name="q6"
+           data-left="совсем не доволен(-а)"
+           data-right="очень доволен(-а)"
+           data-na="true"></div>
+      <p class="error" data-err="q6" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        6. Насколько вы довольны информированностью о процессе отбора (этапы, сроки, что будет дальше)?
+      </div>
+      <!-- старый вопрос => q7 -->
+      <div class="scale" data-name="q7"
+           data-left="совсем не доволен(-а)"
+           data-right="очень доволен(-а)"></div>
+      <p class="error" data-err="q7" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        7. Насколько вы довольны скоростью процесса найма?
+      </div>
+      <!-- старый вопрос => q8 -->
+      <div class="scale" data-name="q8"
+           data-left="совсем не доволен(-а)"
+           data-right="очень доволен(-а)"></div>
+      <p class="error" data-err="q8" style="display:none;"></p>
+    </div>
+
+    <p class="error" id="error-global" style="display:none;"></p>
+    <button type="submit" id="submit-btn">Отправить</button>
+  </form>
+
+  <div class="text-block" id="result"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
