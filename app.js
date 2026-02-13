@@ -4,7 +4,7 @@
   // TODO: подставишь invoke URL YC Function (БЕЗ /submit)
   const BACKEND_URL = "https://functions.yandexcloud.net/d4e1id3b0ckdmjkvt72j";
 
-  const FORM_ID = "nps_2"; // поменяй при необходимости (например "nps_3")
+  const FORM_ID = "nps_6"; // поменяй при необходимости (например "nps_3")
 
   const form = document.getElementById("nps-form");
   const submitBtn = document.getElementById("submit-btn");
@@ -156,6 +156,18 @@
         }
         ok = false;
       }
+    }
+
+    const freeTextEl = document.getElementById("free-text");
+    const freeText = (freeTextEl?.value || "").trim();
+    if (freeText) {
+      answers.free = freeText;
+    }
+
+    const botTextEl = document.getElementById("bot-text");
+    const botText = (botTextEl?.value || "").trim();
+    if (botText) {
+      answers.bot = botText;
     }
 
     if (!ok) return;
