@@ -147,7 +147,7 @@
       if (picked) {
         answers[q] = Number(picked.value);
       } else if (naValue === "na") {
-        answers[q] = "na";
+        answers[q] = "не могу оценить";
       } else {
         const p = form.querySelector(`[data-err="${q}"]`);
         if (p) {
